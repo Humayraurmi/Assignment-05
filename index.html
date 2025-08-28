@@ -77,8 +77,8 @@
                             Copy
                         </button>
                         <button
-                            class="w-[182.33px] h-[40px] flex items-center justify-center gap-2 bg-green-600 text-white rounded-lg">
-                            <i class="fa-solid fa-phone cll-btn"></i>
+                            class="w-[182.33px] h-[40px] flex items-center justify-center gap-2 bg-green-600 text-white rounded-lg cll-btn">
+                            <i class="fa-solid fa-phone"></i>
                             Call
                         </button>
                     </div>
@@ -106,8 +106,8 @@
                             Copy
                         </button>
                         <button
-                            class="w-[182.33px] h-[40px] flex items-center justify-center gap-2 bg-green-600 text-white rounded-lg">
-                            <i class="fa-solid fa-phone cll-btn"></i>
+                            class="cll-btn w-[182.33px] h-[40px] flex items-center justify-center gap-2 bg-green-600 text-white rounded-lg">
+                            <i class="fa-solid fa-phone"></i>
                             Call
                         </button>
                     </div>
@@ -136,8 +136,8 @@
                             Copy
                         </button>
                         <button
-                            class="w-[182.33px] h-[40px] flex items-center justify-center gap-2 bg-green-600 text-white rounded-lg">
-                            <i class="fa-solid fa-phone cll-btn"></i>
+                            class="cll-btn w-[182.33px] h-[40px] flex items-center justify-center gap-2 bg-green-600 text-white rounded-lg">
+                            <i class="fa-solid fa-phone"></i>
                             Call
                         </button>
                     </div>
@@ -165,8 +165,8 @@
                             Copy
                         </button>
                         <button
-                            class="w-[182.33px] h-[40px] flex items-center justify-center gap-2 bg-green-600 text-white rounded-lg">
-                            <i class="fa-solid fa-phone cll-btn"></i>
+                            class="cll-btn w-[182.33px] h-[40px] flex items-center justify-center gap-2 bg-green-600 text-white rounded-lg">
+                            <i class="fa-solid fa-phone"></i>
                             Call
                         </button>
                     </div>
@@ -194,8 +194,8 @@
                             Copy
                         </button>
                         <button
-                            class="w-[182.33px] h-[40px] flex items-center justify-center gap-2 bg-green-600 text-white rounded-lg">
-                            <i class="fa-solid fa-phone cll-btn"></i>
+                            class="cll-btn w-[182.33px] h-[40px] flex items-center justify-center gap-2 bg-green-600 text-white rounded-lg">
+                            <i class="fa-solid fa-phone"></i>
                             Call
                         </button>
                     </div>
@@ -223,8 +223,8 @@
                             Copy
                         </button>
                         <button
-                            class="w-[182.33px] h-[40px] flex items-center justify-center gap-2 bg-green-600 text-white rounded-lg">
-                            <i class="fa-solid fa-phone cll-btn"></i>
+                            class="cll-btn w-[182.33px] h-[40px] flex items-center justify-center gap-2 bg-green-600 text-white rounded-lg">
+                            <i class="fa-solid fa-phone"></i>
                             Call
                         </button>
                     </div>
@@ -252,8 +252,8 @@
                             Copy
                         </button>
                         <button
-                            class="w-[182.33px] h-[40px] flex items-center justify-center gap-2 bg-green-600 text-white rounded-lg">
-                            <i class="fa-solid fa-phone cll-btn"></i>
+                            class="cll-btn w-[182.33px] h-[40px] flex items-center justify-center gap-2 bg-green-600 text-white rounded-lg">
+                            <i class="fa-solid fa-phone"></i>
                             Call
                         </button>
                     </div>
@@ -282,8 +282,8 @@
                             Copy
                         </button>
                         <button
-                            class="w-[182.33px] h-[40px] flex items-center justify-center gap-2 bg-green-600 text-white rounded-lg">
-                            <i class="fa-solid fa-phone cll-btn"></i>
+                            class="cll-btn w-[182.33px] h-[40px] flex items-center justify-center gap-2 bg-green-600 text-white rounded-lg">
+                            <i class="fa-solid fa-phone"></i>
                             Call
                         </button>
                     </div>
@@ -312,25 +312,29 @@
                             Copy
                         </button>
                         <button
-                            class="w-[182.33px] h-[40px] flex items-center justify-center gap-2 bg-green-600 text-white rounded-lg">
-                            <i class="fa-solid fa-phone cll-btn"></i>
+                            class="cll-btn w-[182.33px] h-[40px] flex items-center justify-center gap-2 bg-green-600 text-white rounded-lg">
+                            <i class="fa-solid fa-phone"></i>
                             Call
                         </button>
                     </div>
                 </div>
             </div>
-            <div class="flex justify-between bg-white border-2 border-none shadow-lg rounded-2xl p-5 h-[400px] lg:w-[340px] lg:h-[880px]">
-                <div class="flex justify-center  gap-2">
-                    <span><i class="fa-regular fa-clock"></i></span>
-                    <h2>Call History</h2>
+            <div
+                class="bg-white border-2 border-none shadow-lg rounded-2xl p-5 h-[400px] lg:w-[340px] lg:h-[880px] flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <div class="flex items-center gap-2">
+                            <span><i class="fa-regular fa-clock"></i></span>
+                            <h2 class="font-semibold">Call History</h2>
+                        </div>
+                        <button id="clear-history"
+                            class="w-[80px] h-[30px] flex items-center justify-center gap-2 bg-green-600 text-white rounded-full text-sm">
+                            Clear
+                        </button>
+                    </div>
+                    <ul id="call-history" class="space-y-2 text-sm text-gray-700 max-h-[320px] overflow-y-auto"></ul>
                 </div>
-                <button
-                    class="w-[100px] h-[30px] flex items-center justify-center gap-2 bg-green-600 text-white rounded-full">
-                    <i class="fa-solid fa-phone"></i>
-                    Clear
-                </button>
             </div>
-
         </section>
     </section>
 
