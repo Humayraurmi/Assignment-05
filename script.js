@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const card = e.target.closest(".p-5");
             const serviceName = card.querySelector("h4").innerText;
             const serviceNumber = card.querySelector("h2").innerText;
-            alert(`Calling ${serviceName} (${serviceNumber})`);
+            alert(`Calling ${serviceName} ${serviceNumber}`);
             const timeNow = new Date();
             const timeStr = timeNow.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
             const li = document.createElement("li");
@@ -43,12 +43,39 @@ document.addEventListener("DOMContentLoaded", function () {
                 <span class="text-xs text-gray-400">${timeStr}</span>
             `;
             callHistoryList.prepend(li);
-        });
+        })
     }
     clearBtn.addEventListener("click", function () {
         callHistoryList.innerHTML = "";
     })
 })
+
+
+// copy button
+document.addEventListener("DOMContentLoaded", function () {
+    let copyCount = 0;
+    const copySpan = document.getElementById("copy-count");
+    const copyButtons = document.querySelectorAll(".copy-btn"); // ✅ FIXED SELECTOR
+
+    for (let i = 0; i < copyButtons.length; i++) {
+        copyButtons[i].addEventListener("click", function (e) {
+            const card = e.target.closest(".p-5"); // find the card
+            const serviceNumber = card.querySelector("h2").innerText.trim(); // get number
+
+            // ✅ Copy to clipboard
+            navigator.clipboard.writeText(serviceNumber)
+                .then(() => {
+                    alert("Copied: " + serviceNumber); // show alert
+                    copyCount++; // increase count
+                    copySpan.innerText = copyCount; // update navbar
+                })
+                .catch(err => {
+                    console.error("Copy failed", err);
+                })
+        })
+    }
+})
+
 
 
 
