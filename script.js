@@ -55,19 +55,17 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     let copyCount = 0;
     const copySpan = document.getElementById("copy-count");
-    const copyButtons = document.querySelectorAll(".copy-btn"); // ✅ FIXED SELECTOR
+    const copyButtons = document.querySelectorAll(".copy-btn");
 
     for (let i = 0; i < copyButtons.length; i++) {
         copyButtons[i].addEventListener("click", function (e) {
-            const card = e.target.closest(".p-5"); // find the card
-            const serviceNumber = card.querySelector("h2").innerText.trim(); // get number
-
-            // ✅ Copy to clipboard
+            const card = e.target.closest(".p-5");
+            const serviceNumber = card.querySelector("h2").innerText.trim();
             navigator.clipboard.writeText(serviceNumber)
                 .then(() => {
-                    alert("Copied: " + serviceNumber); // show alert
-                    copyCount++; // increase count
-                    copySpan.innerText = copyCount; // update navbar
+                    alert("Copied: " + serviceNumber);
+                    copyCount++;
+                    copySpan.innerText = copyCount;
                 })
                 .catch(err => {
                     console.error("Copy failed", err);
