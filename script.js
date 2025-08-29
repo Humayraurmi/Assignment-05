@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 alert("Not enough coins to make a call");
                 return;
             }
-
             coins -= 20;
             coinSpan.textContent = coins;
 
